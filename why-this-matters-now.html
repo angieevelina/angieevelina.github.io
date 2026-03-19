@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why This Matters Now – Angie Evelina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --dark: #141414;
+            --light: #fafaf8;
+            --cream: #f3f1ec;
+            --accent: #8c3a4f;
+            --gray: #7a756d;
+            --gray-light: #b0aaa0;
+            --border: rgba(0,0,0,0.07);
+            --serif: 'Instrument Serif', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            line-height: 1.7;
+            color: var(--dark);
+            background: var(--light);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── Navigation ─── */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(250, 250, 248, 0.95);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            z-index: 1000;
+            padding: 1.25rem 5%;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-weight: 400;
+            color: var(--dark);
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .logo .first-name {
+            font-size: 1rem;
+            letter-spacing: 0.01em;
+        }
+
+        .logo .last-name {
+            font-size: 1.35rem;
+            letter-spacing: -0.02em;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--dark);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 400;
+            letter-spacing: 0.02em;
+            transition: opacity 0.3s;
+        }
+
+        .nav-links a:hover { opacity: 0.5; }
+
+        /* ─── Article ─── */
+        .article {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 8rem 5% 5rem;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--gray);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 3rem;
+            transition: opacity 0.3s;
+        }
+
+        .back-link:hover { opacity: 0.5; }
+
+        h1 {
+            font-family: var(--serif);
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-family: var(--sans);
+            font-size: 1.05rem;
+            color: var(--gray);
+            margin-bottom: 3rem;
+            font-style: italic;
+        }
+
+        p {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            margin-bottom: 1.75rem;
+        }
+
+        em { font-style: italic; }
+
+        .closing {
+            margin-top: 3.5rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+        }
+
+        .closing a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: opacity 0.3s;
+        }
+
+        .closing a:hover { opacity: 0.65; }
+
+        /* ─── Responsive ─── */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 0.75rem;
+            }
+            .nav-links { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+            .article { padding: 7rem 5% 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <span class="first-name">Angie</span> <span class="last-name">Evelina</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#work">The Work</a></li>
+                <li><a href="index.html#framework">Emergence Psychology</a></li>
+                <li><a href="index.html#services">Practice</a></li>
+                <li><a href="index.html#writing">Writing</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article">
+        <a href="index.html#writing" class="back-link">&larr; Back to Writing</a>
+
+        <h1>Why This Matters Now</h1>
+        <p class="subtitle" style="color: var(--accent);">The problem with monsters and the instinct to destroy</p>
+        <p style="font-size: 0.95rem; color: var(--dark); margin-bottom: 3rem;">Angie Evelina, MS</p>
+
+        <p>We are living through a moment of heartbreaking, horrifying revelation. What's emerging &ndash; about people in power, about the institutions that protect them, about the scale and depth of harm that was caused and enabled &ndash; is devastating.</p>
+
+        <p>But as depraved as all of it is, these weren't strangers from another species. They were men who held positions of respect, men who taught in our schools, worked in our hospitals, and lived in our homes. Men who had families and wives and sisters and daughters. And there were women, too, who upheld and maintained and participated in the abuse. As hard as it is to reckon with, the capacity for that kind of harm lives in humanity, not outside it. What we are grappling with does not just exist on an island.</p>
+
+        <p>As soon as we render someone a &ldquo;monster,&rdquo; we foreclose the ability to face the fact that they are human. And we cloud the space that surrounds them. It becomes a murky swamp. Or the annals of hell. It becomes abstract. Supernatural. And very difficult to engage with. It is, understandably, nearly impossible to process, so we don't. Dehumanization is often cruel, but always avoidant.</p>
+
+        <p>There is profound dysfunction in systems we didn't create, and a level of depravity in some pockets of society whose scale and depth we're only beginning to grasp. The instinct to destroy makes sense. The instinct to label and look away is entirely valid. But when we linger and cannot move past demonization, we make room for a million excuses, a million silences and rationalizations and denials, a million decisions that are simply less monstrous by comparison &ndash; ultimately forming the bedrock for this scale and severity of abuse. We allow the energy of the system to morph and hide and persist because we have failed to address its essence. Energy can neither be created nor destroyed, after all, only transferred or transformed.</p>
+
+        <p>The very hard reality is that the corruption of others does not preclude us from taking responsibility for our own fear and hate &ndash; it heightens the urgency of doing so. If we consider ourselves decent, it is our burden. These systems feed on our fear and hate and needs. We're not powerless. We have agency. And we need to face what others cannot.</p>
+
+        <p>My work and worldview aren't about suppressing anger or pumping naive love into the world. Anger is valid and necessary. But anger without understanding burns hot and burns out. It targets individuals, gets its catharsis, and often leaves broader systems &ndash; and all of the tiny iterations of those systems &ndash; intact. The system knows this. But anger that seeks understanding, that can live alongside humility and rigor in an effort to see how harm operates, how power protects itself, how ordinary people participate in cultures that enable abuse &ndash; can potentially change things.</p>
+
+        <p>The path forward isn't domination or destruction by another name. It isn't a seat at the table in the same structure. It's something harder: strength that can hold softness, accountability that can hold compassion, and most importantly, the courage to face darkness without becoming it. We've inherited a single definition of power and spent centuries drowning in it &ndash; domination, acquisition, accumulation, conquest &ndash; mistaking it for the only way and crushing ourselves and our kids in an attempt to gain access. What would happen if we built an entirely new frame?</p>
+
+        <p>The word courage comes from the Latin <em>cor</em>, meaning heart. But following the heart isn't enough. The heart can be clouded by fear, obscured by ego and conditioning. True courage requires knowing the difference between what's rooted in love and what's rooted in fear. This work is hard. It asks us to see how extraordinary harm is &ndash; in part &ndash; enabled by ordinary choices. It asks us to see how cycles perpetuate themselves when we merely flip who holds power rather than transform how power operates and examine what drives it. It does not excuse, it interrogates. And it asks us to choose differently. It asks us to meet this moment with something different than that which created it.</p>
+
+        <div class="closing">
+            <a href="index.html#writing">&larr; Back to Writing</a>
+        </div>
+    </article>
+
+</body>
+</html>

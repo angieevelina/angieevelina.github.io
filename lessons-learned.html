@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons Learned in Justice Reform – Angie Evelina</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --dark: #141414; --light: #fafaf8; --cream: #f3f1ec; --accent: #8c3a4f;
+            --gray: #7a756d; --gray-light: #b0aaa0; --border: rgba(0,0,0,0.07);
+            --serif: 'Instrument Serif', Georgia, serif;
+            --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        html { scroll-behavior: smooth; }
+        body { font-family: var(--sans); line-height: 1.7; color: var(--dark); background: var(--light); -webkit-font-smoothing: antialiased; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(250,250,248,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); z-index: 1000; padding: 1.25rem 5%; border-bottom: 1px solid var(--border); }
+        .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: var(--serif); font-weight: 400; color: var(--dark); line-height: 1; text-decoration: none; }
+        .logo .first-name { font-size: 1rem; letter-spacing: 0.01em; }
+        .logo .last-name { font-size: 1.35rem; letter-spacing: -0.02em; font-weight: 700; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--dark); text-decoration: none; font-size: 0.85rem; font-weight: 400; letter-spacing: 0.02em; transition: opacity 0.3s; }
+        .nav-links a:hover { opacity: 0.5; }
+        .article { max-width: 700px; margin: 0 auto; padding: 8rem 5% 5rem; }
+        .back-link { display: inline-block; color: var(--gray); text-decoration: none; font-size: 0.9rem; margin-bottom: 3rem; transition: opacity 0.3s; }
+        .back-link:hover { opacity: 0.5; }
+        h1 { font-family: var(--serif); font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 400; margin-bottom: 0.5rem; line-height: 1.15; letter-spacing: -0.02em; }
+        .subtitle { font-size: 1.05rem; color: var(--gray); margin-bottom: 3rem; font-style: italic; }
+        p { font-size: 1.05rem; line-height: 1.9; margin-bottom: 1.75rem; }
+        em { font-style: italic; }
+        .paper-cta { margin-top: 3rem; padding: 2.5rem; background: var(--cream); border-radius: 3px; }
+        .paper-cta p { font-size: 1rem; line-height: 1.8; margin-bottom: 1rem; }
+        .paper-cta p:last-child { margin-bottom: 0; }
+        .paper-cta a { color: var(--accent); text-decoration: none; font-weight: 500; transition: opacity 0.3s; }
+        .paper-cta a:hover { opacity: 0.65; }
+        .closing { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+        .closing a { color: var(--accent); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: opacity 0.3s; }
+        .closing a:hover { opacity: 0.65; }
+        @media (max-width: 768px) {
+            .nav-container { flex-direction: column; gap: 0.75rem; }
+            .nav-links { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+            .article { padding: 7rem 5% 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo"><span class="first-name">Angie</span> <span class="last-name">Evelina</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html#work">The Work</a></li>
+                <li><a href="index.html#framework">Emergence Psychology</a></li>
+                <li><a href="index.html#services">Practice</a></li>
+                <li><a href="index.html#writing">Writing</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="article">
+        <a href="index.html#writing" class="back-link">&larr; Back to Writing</a>
+
+        <h1>Lessons Learned in Justice Reform</h1>
+        <p style="font-size: 0.95rem; color: var(--dark); margin-bottom: 0.5rem;">Angie Evelina, MS</p>
+        <p class="subtitle">An organizational analysis of the Reset Foundation</p>
+        <p style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2.5px; color: var(--accent); margin-bottom: 1.5rem; font-weight: 500;">Introduction</p>
+
+        <p>The Reset Foundation's mission was to dismantle the poverty to prison pipeline through a humane and restorative alternative to incarceration for transition age youth. A 24/7, wraparound residential diversion program anchored in culturally-competent relationships, skills-based education, relevant professional skills, and trauma-informed wellness, Reset's model was both innovative and intuitive, and would prove resonant across a wide array of stakeholders and supporters. Ambitious, comprehensive, and necessary, Reset's work held tremendous promise in its simplicity and purpose. Its execution, however, would prove costly and complex.</p>
+
+        <p>The Reset Foundation's work was sold as simple, because in theory and vision, it is. It seems obvious to repurpose time, money, and talent to generate vastly improved outcomes for incarcerated young people; to take the same basic frame, but redirect all resources from punitive to restorative, from inhumane to humane, from languishing to learning. It was a simple, straightforward, and logical solution: same time, same dollars, different environment, different inputs, better results. Yet, to design, develop, and successfully execute a true wraparound alternative to incarceration is a massive and complicated undertaking. Bringing the work from vision to reality is far from simple. Reset endeavored to build a broad, sustainable, and genuinely impactful model of reform to reduce recidivism. To that end, the organization must gain access to and collaborate with the criminal justice system it was hoping to transform. It must raise millions of dollars just to demonstrate that it could work and was worthy of investment. It must tackle and overcome pervasive institutional barriers with minimal resources and no clear roadmap. It must implement an around-the-clock program equipped to manage a secure residence, build critical 21st century skills, support complex trauma, counteract the effects of systemic and social oppression and neglect, launch careers, and transition young people back into their communities. The path of a startup organization is rarely smooth; for Reset&mdash;a disruptive nonprofit tackling systems change and a reform space in which it had minimal experience&mdash;that path was particularly tough.</p>
+
+        <p>When Reset closed its program doors and suspended operations in November 2017, it was devastating for many, and the questions and attendant search for answers was swift: How did this promising organization, with an intuitive model, vital mission, talented staff, and widespread support, fail to thrive, when so many had hoped and needed it to succeed? Instinctively, many wondered what went wrong, and if there was someone or something to blame. Throughout the following pages, we attempt to identify, and wherever possible, disentangle, the factors and dynamics that contributed to the organization's closure&mdash;from formidable systemic challenges in the context of an innovative model for which there was no clear path or precedent, to leadership missteps, internal disconnects and disruption, and the pervasive impact of personal, organizational, and systemic trauma. It is tempting to isolate or reduce Reset's closure into a single thread or easy answer&mdash;it was the system, it was leadership, it was the scarcity of resources, it was just the fate of another startup nonprofit&mdash;but what is most compelling and informative, is Reset's story in its entirety. Reset's is the story of a young and tenacious organization that touched and engaged a range of deeply complex intersectional issues&mdash;from criminal justice, education, employment, and mental health, to race, class, real estate, privilege, and power&mdash;and as such, offers a window into these issues' depth, breadth, interplay and effect. While it is of course useful to closely examine each strand, it is the interaction and impact of them all, combined with human passion, intention, effort, and error, that tell the story of this organization.</p>
+
+        <div class="paper-cta">
+            <p>This is the introduction to a comprehensive organizational analysis covering everything from real estate, funding, and government partnerships to race, power, staffing, and the tension between restorative ideals and operational reality. If you're interested in reading the full analysis, please reach out.</p>
+            <p><a href="mailto:angieevelinainc@gmail.com">Reach out &rarr;</a></p>
+        </div>
+
+        <div class="closing">
+            <a href="index.html#writing">&larr; Back to Writing</a>
+        </div>
+    </article>
+</body>
+</html>
