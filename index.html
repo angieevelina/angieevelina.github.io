@@ -575,6 +575,11 @@
             font-style: italic;
         }
 
+        /* ─── Scroll offset for fixed nav ─── */
+        section, .hero {
+            scroll-margin-top: 5rem;
+        }
+
         /* ─── Responsive ─── */
         @media (max-width: 900px) {
             .about-content {
@@ -591,8 +596,9 @@
                 gap: 0.75rem;
             }
             .nav-links { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
-            .hero { padding: 7rem 5% 3.5rem; }
-            section { padding: 3.5rem 5%; }
+            .hero { padding: 10rem 5% 3.5rem; }
+            section { padding: 3.5rem 5%; scroll-margin-top: 7rem; }
+            .hero { scroll-margin-top: 0; }
             .model-grid, .services-grid { grid-template-columns: 1fr; }
             .hero-statement h1 { margin-bottom: 0.15rem; }
             .carousel-slide { padding: 2rem 1rem; }
@@ -703,7 +709,7 @@
 
             <div class="model-grid">
                 <div class="model-card">
-                    <h4>Binary Thinking</h4>
+                    <h4>Collapsed Thinking</h4>
                     <p>Good or bad. Right or wrong. Us or them. Pick a side and defend it absolutely.</p>
                 </div>
                 <div class="model-card">
@@ -748,7 +754,7 @@
 
             <p><em>Emergence Psychology</em> proposes that mental states and human behavior may function less like fixed conditions to be corrected and more like fields of possibility &ndash; fluid, context-dependent, and continuously shaped through how we observe, engage, and connect.</p>
 
-            <p>This is critical because the rigidity we bring to ourselves and others &ndash; the binary thinking, the pathologizing, the certainty that people and conditions are static &ndash; isn't just a habit. It's a lens that collapses possibility. But nothing is permanent. Everything can shift. Everything does.</p>
+            <p>This is critical because the rigidity we bring to ourselves and others &ndash; the reductive thinking, the pathologizing, the certainty that people and conditions are static &ndash; isn't just a habit. It's a lens that collapses possibility. But nothing is permanent. Everything can shift. Everything does.</p>
 
         </div>
     </section>
@@ -810,18 +816,18 @@
                     <p class="idea-card-desc" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--gray-light);">2026</p>
                 </a>
 
-                <a href="on-violence-and-harm.html" class="idea-card">
-                    <span class="idea-card-icon">&#10022;</span>
-                    <div class="idea-card-title">On Violence &amp; Harm</div>
-                    <p class="idea-card-desc">A reflection on the fluidity and insidiousness of harm &ndash; visible and invisible, sanctioned and condemned.</p>
-                    <p class="idea-card-desc" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--gray-light);">2024</p>
-                </a>
-
                 <a href="tedx-talk.html" class="idea-card">
                     <span class="idea-card-icon">&#9654;</span>
                     <div class="idea-card-title">TEDx Talk: Integrity and the Victim/Villain Cycle</div>
                     <p class="idea-card-desc">A talk on harm, repair, and what I learned working with youth in the justice system.</p>
                     <p class="idea-card-desc" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--gray-light);">2021</p>
+                </a>
+
+                <a href="on-violence-and-harm.html" class="idea-card">
+                    <span class="idea-card-icon">&#10022;</span>
+                    <div class="idea-card-title">On Violence &amp; Harm</div>
+                    <p class="idea-card-desc">A reflection on the fluidity and insidiousness of harm &ndash; visible and invisible, sanctioned and condemned.</p>
+                    <p class="idea-card-desc" style="margin-top: 0.5rem; font-size: 0.8rem; color: var(--gray-light);">2024</p>
                 </a>
 
                 <a href="lessons-learned.html" class="idea-card">
