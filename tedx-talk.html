@@ -37,9 +37,19 @@
         .closing { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--border); }
         .closing a { color: var(--accent); text-decoration: none; font-size: 0.95rem; font-weight: 500; transition: opacity 0.3s; }
         .closing a:hover { opacity: 0.65; }
+        /* Hamburger Menu */
+        .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 0.5rem; z-index: 1001; }
+        .hamburger span { display: block; width: 22px; height: 2px; background: var(--dark); margin: 5px 0; transition: all 0.3s; }
+        .mobile-menu { display: none; }
         @media (max-width: 768px) {
-            .nav-container { flex-direction: column; gap: 0.75rem; }
-            .nav-links { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
+            .nav-container { flex-direction: row; justify-content: space-between; align-items: center; }
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .mobile-menu { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh; background: var(--dark); z-index: 1000; flex-direction: column; justify-content: center; align-items: center; gap: 2rem; }
+            .mobile-menu.open { display: flex; }
+            .mobile-menu a { color: var(--light); text-decoration: none; font-family: var(--serif); font-size: 1.5rem; font-weight: 400; letter-spacing: -0.01em; transition: opacity 0.3s; }
+            .mobile-menu a:hover { opacity: 0.5; }
+            .mobile-menu .close-btn { position: absolute; top: 1.25rem; right: 5%; background: none; border: none; color: var(--light); font-size: 1.75rem; cursor: pointer; padding: 0.5rem; line-height: 1; }
             .article { padding: 7rem 5% 3.5rem; }
         }
     </style>
@@ -56,8 +66,23 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
+        <a href="index.html#work" onclick="toggleMenu()">The Work</a>
+        <a href="index.html#framework" onclick="toggleMenu()">Emergence Psychology</a>
+        <a href="index.html#services" onclick="toggleMenu()">Practice</a>
+        <a href="index.html#writing" onclick="toggleMenu()">Writing</a>
+        <a href="index.html#about" onclick="toggleMenu()">About</a>
+        <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+    </div>
 
     <article class="article">
         <a href="index.html#writing" class="back-link">&larr; Back to Writing</a>
@@ -156,5 +181,13 @@
             <a href="index.html#writing">&larr; Back to Writing</a>
         </div>
     </article>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('open');
+        }
+    </script>
+
 </body>
 </html>

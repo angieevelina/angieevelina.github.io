@@ -195,14 +195,85 @@
 
         .closing a:hover { opacity: 0.65; }
 
+
+        /* ─── Hamburger Menu ─── */
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            z-index: 1001;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--dark);
+            margin: 5px 0;
+            transition: all 0.3s;
+        }
+
+        .mobile-menu {
+            display: none;
+        }
+
         /* ─── Responsive ─── */
         @media (max-width: 768px) {
             .nav-container {
-                flex-direction: column;
-                gap: 0.75rem;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
             }
-            .nav-links { gap: 1.25rem; flex-wrap: wrap; justify-content: center; }
-            .article { padding: 7rem 5% 3.5rem; }
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+
+            .mobile-menu {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--dark);
+                z-index: 1000;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+            }
+
+            .mobile-menu.open {
+                display: flex;
+            }
+
+            .mobile-menu a {
+                color: var(--light);
+                text-decoration: none;
+                font-family: var(--serif);
+                font-size: 1.5rem;
+                font-weight: 400;
+                letter-spacing: -0.01em;
+                transition: opacity 0.3s;
+            }
+
+            .mobile-menu a:hover { opacity: 0.5; }
+
+            .mobile-menu .close-btn {
+                position: absolute;
+                top: 1.25rem;
+                right: 5%;
+                background: none;
+                border: none;
+                color: var(--light);
+                font-size: 1.75rem;
+                cursor: pointer;
+                padding: 0.5rem;
+                line-height: 1;
+            }
+
+            .article { padding: 6rem 5% 3.5rem; }
         }
     </style>
 </head>
@@ -222,8 +293,23 @@
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
+            <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" onclick="toggleMenu()" aria-label="Close menu">&times;</button>
+        <a href="index.html#work" onclick="toggleMenu()">The Work</a>
+        <a href="index.html#framework" onclick="toggleMenu()">Emergence Psychology</a>
+        <a href="index.html#services" onclick="toggleMenu()">Practice</a>
+        <a href="index.html#writing" onclick="toggleMenu()">Writing</a>
+        <a href="index.html#about" onclick="toggleMenu()">About</a>
+        <a href="index.html#contact" onclick="toggleMenu()">Contact</a>
+    </div>
 
     <article class="article">
         <a href="index.html#writing" class="back-link">&larr; Back to Writing</a>
@@ -248,13 +334,8 @@
 
         <div class="paper-cta">
             <p>This is the introduction to the full paper. If you're a researcher, clinician, physicist, or systems thinker interested in reading the complete framework &ndash; or in collaborating to pressure-test and develop it &ndash; please reach out.</p>
-            <p><a href="mailto:angieevelinainc@gmail.com">Reach out &rarr;</a></p>
+            <p><a href="/cdn-cgi/l/email-protection#ceafa0a9a7ababb8aba2a7a0afa7a0ad8ea9a3afa7a2e0ada1a3">Reach out &rarr;</a></p>
         </div>
 
         <div class="closing">
             <a href="index.html#writing">&larr; Back to Writing</a>
-        </div>
-    </article>
-
-</body>
-</html>
